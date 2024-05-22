@@ -7,7 +7,7 @@ import SignIn from './pages/Authentication/SignIn';
 import SignUp from './pages/Authentication/SignUp';
 import Calendar from './pages/Calendar';
 import Chart from './pages/Chart';
-import ECommerce from './pages/Dashboard/ECommerce';
+// import ECommerce from './pages/Dashboard/ECommerce';
 import FormElements from './pages/Form/FormElements';
 import FormLayout from './pages/Form/FormLayout';
 import Profile from './pages/Profile';
@@ -15,6 +15,11 @@ import Settings from './pages/Settings';
 import Tables from './pages/Tables';
 import Alerts from './pages/UiElements/Alerts';
 import Buttons from './pages/UiElements/Buttons';
+import Author from './pages/Author/Author';
+import CreateAuthor from './pages/Author/CreateAuthor';
+import EditAuthor from './pages/Author/EditAuthor';
+import Tag from './pages/Tag/Tag';
+import Inquiry from './pages/Inquiry/Inquiry';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -63,6 +68,53 @@ function App() {
             </>
           }
         />
+        <Route
+          path="/author"
+          element={
+            <>
+              <PageTitle title="Author | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <Author />
+            </>
+          }
+        />
+        <Route
+          path="/author/create"
+          element={
+            <>
+              <PageTitle title="Author | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <CreateAuthor />
+            </>
+          }
+        />
+        <Route
+          path="/author/edit/:id"
+          element={
+            <>
+              <PageTitle title="Author | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <EditAuthor />
+            </>
+          }
+        />
+         <Route
+          path="/tag"
+          element={
+            <>
+              <PageTitle title="Tag | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <Tag />
+            </>
+          }
+        />
+         <Route
+          path="/inquiry"
+          element={
+            <>
+              <PageTitle title="Inquiry | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <Inquiry />
+            </>
+          }
+        />
+
+
         <Route
           path="/forms/form-elements"
           element={
